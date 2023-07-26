@@ -18,7 +18,7 @@ def divisao(a, b):
         print(TypeError('Não é possivel dividir por 0'))
 
 def multiplicação(a, b):
-    if isinstance(a, int or float) and isinstance(b, int or float):
+    if isinstance(a, float) and isinstance(b, float):
         multiplicação = a * b
         return multiplicação
     else:
