@@ -1,9 +1,10 @@
 def soma(a, b):
-    if isinstance(a, int or float) and isinstance(b, int or float):
+    if isinstance(a, float) and isinstance(b, float):
         soma = a + b
         return soma
     else:
         print(TypeError(f'O input {a} e {b} devem ser uma int ou float, recebido {a}, {type(a)}, {b} tipo {type(b)}'))
+        return 'Calculo invalido'
 
 def subtracao(a, b):
     subtracao = a - b
@@ -22,3 +23,4 @@ def multiplicação(a, b):
         return multiplicação
     else:
         print(TypeError(f'O input {a} e {b} devem ser uma int ou float, recebido {a}, {type(a)}, {b} tipo {type(b)}'))
+        

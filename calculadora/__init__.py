@@ -1,31 +1,34 @@
-from funcoes import soma
-from funcoes import subtracao
-from funcoes import divisao
-from funcoes import multiplicação
+from .funcoes import divisao, multiplicação, soma, subtracao
+
 
 def calcule():
     loop = True
     while loop == True:
         a = input('Escolha o numero [a]: ')
+        if str.isnumeric(a):
+            a = float(a)
         b = input('Escolha o numero [b]: ')
+        if str.isnumeric(b):
+            b = float(b)
+        
         escolha = input("""
-                        Escolha a operação que voce deseja realizar:
-                        [soma] [+] -> Somar
-                        [subtracao] [-] -> Subtrair
-                        [divisao] [/] -> Dividir
-                        [multiplicação] [*] -> Multiplicar
-                        [fechar] -> Fechar o programa
-                        """)
-        if escolha == 'soma' or '+':
+Escolha a operação que voce deseja realizar:
+[soma] [+]
+[subtracao] [-]
+[divisao] [/]
+[multiplicação] [*]
+[fechar] -> Fechar o programa
+""")
+        if escolha == 'soma' or escolha == '+':
             resultado = soma(a, b)
             print(f'O resultado de {a} + {b} = {resultado}')
-        elif escolha == 'subtracao' or '-':
+        elif escolha == 'subtracao' or escolha == '-':
             resultado = subtracao(a, b)
             print(f'O resultado de {a} - {b} = {resultado}')
-        elif escolha == 'divisao' or '/':
+        elif escolha == 'divisao' or escolha == '/':
             resultado = divisao(a, b)
             print(f'O resultado de {a} / {b} = {resultado}')
-        elif escolha == 'multiplicação' or '*':
+        elif escolha == 'multiplicação' or escolha == '*':
             resultado = multiplicação(a, b)
             print(f'O resultado de {a} * {b} = {resultado}')
         elif escolha == 'fechar':
